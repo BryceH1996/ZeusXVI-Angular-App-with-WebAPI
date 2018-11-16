@@ -1,0 +1,102 @@
+<div class="navbar navbar-expand navbar-dark bg-dark mb-4">
+  <div class="container">
+    <ul class="navbar-nav ml-auto">
+      <li class="text-white" *ngIf="login">
+        Welcome {{User.userName}} | Balance : R{{User.balance}}
+        <button (click)="logout()" class="btn btn-danger ml-3">Logout</button>
+      </li>
+
+      <li class="nav-item row" *ngIf="!login">
+        <table class="table-borderless" >
+          <tr *ngIf="register == true">
+            <td>
+              <input type="text" placeholder="Username" #name>
+              <input type="password" placeholder="Password" #pass>
+            </td>
+            <td>
+              <button type="submit" (click)="getUser(name.value, pass.value); pass.value=''">Login</button>
+            </td>
+          </tr>
+        </table>
+        <a class="nav-item pointer mr-5 text-white" (click)="toggleRegister()" *ngIf="register == false">Login</a>
+      </li>
+      <li class="nav-item row" *ngIf="!login">
+        <table class="table-borderless">
+          <tr *ngIf="loggedIn == true">
+            <td>
+              <input type="text" placeholder="Username" #name>
+              <input type="password" placeholder="Password" #pass>
+            </td>
+            <td>
+              <button (click)="postUser(name.value, pass.value)">Register</button>
+            </td>
+          </tr>
+        </table>
+        <a class="nav-item pointer ml-5 text-white" (click)="toggleLogin()" *ngIf="loggedIn == false">Register</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<nav class="col-sm-3 col-md-2 sidebar">
+  <div class="pointer">
+    <div class="pl-1" *ngFor="let sport of Sports" (click)="findBySportID(sport.id)">{{sport.sportName}}
+      <div *ngFor="let country of CountryTemp" (click)="findByCountryID(country.id)">
+        <div class="pl-2" *ngIf="sport.id == country.sportID">{{country.countryName}}
+          <div *ngFor="let tour of TournamentTemp" (click)="findByTourID(tour.id)">
+            <div class="pl-2" *ngIf="country.id == tour.countryID">{{tour.tournamentName}}
+              <div *ngFor="let event of EventTemp" (click)="findByEventID(event.id)">
+                <div class="pl-2" *ngIf="tour.id == event.tournamentID">{{event.eventName}}
+                  <div *ngFor="let bet of BetTypeTemp">
+                    <div class="pl-2" *ngIf="event.id == bet.eventID">
+                      <a (click)="findByBetID(bet.id); toggleMarket()" class="nav-link">{{bet.betName}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mainLayout" *ngIf="marketShow">
+  <div class="row">
+    <table class="table-borderless table-hover table-striped col-sm-12">
+      <tr>
+        <th>Odd One</th>
+        <th>Draw</th>
+        <th>Odd Two</th>
+        <th>Stake</th>
+        <th>Potential Payout</th>
+        <th>Take Bet</th>
+      </tr>
+      <tr *ngFor="let market of TempMarket">
+        <td>
+          {{market.oddOne}}
+          <button (click)="StakeTaken(stake.value, market.oddOne)">Take Odds</button>
+        </td>
+        <td>{{market.draw}}
+          <button (click)="StakeTaken(stake.value, market.draw)">Take Odds</button>
+        </td>
+        <td>{{market.oddTwo}}
+          <button (click)="StakeTaken(stake.value, market.oddTwo)">Take Odds</button>
+        </td>
+        <td>
+          <input type="number" #stake>
+        </td>
+        <td *ngIf="amount">
+          {{amount}}
+        </td>
+        <td *ngIf="!amount">
+          0
+        </td>
+        <td>
+          <button class="btn btn-dark" (click)="postBet(amount, market.id); stack.value=''; " *ngIf="login">Add
+            bet</button>
+          <button class="btn disabled" *ngIf="!login">Add Bet</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
