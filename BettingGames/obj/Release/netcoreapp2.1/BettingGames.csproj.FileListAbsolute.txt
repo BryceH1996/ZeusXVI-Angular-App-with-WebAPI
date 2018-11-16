@@ -1,0 +1,22 @@
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.deps.json
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.runtimeconfig.json
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.runtimeconfig.dev.json
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.dll
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.pdb
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.csproj.CoreCompileInputs.cache
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.AssemblyInfoInputs.cache
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.AssemblyInfo.cs
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.dll
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.pdb
+\\Zazn-umh-4fbabb\f\Work\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.csprojAssemblyReference.cache
+C:\Development\IIS Hosting\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.deps.json
+C:\Development\IIS Hosting\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.runtimeconfig.json
+C:\Development\IIS Hosting\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.runtimeconfig.dev.json
+C:\Development\IIS Hosting\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.dll
+C:\Development\IIS Hosting\BettingGames\BettingGames\bin\Release\netcoreapp2.1\BettingGames.pdb
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.csprojAssemblyReference.cache
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.csproj.CoreCompileInputs.cache
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.AssemblyInfoInputs.cache
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.AssemblyInfo.cs
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.dll
+C:\Development\IIS Hosting\BettingGames\BettingGames\obj\Release\netcoreapp2.1\BettingGames.pdb

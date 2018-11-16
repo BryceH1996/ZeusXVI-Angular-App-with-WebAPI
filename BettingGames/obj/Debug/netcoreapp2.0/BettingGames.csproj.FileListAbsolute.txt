@@ -1,0 +1,10 @@
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\bin\Debug\netcoreapp2.0\BettingGames.deps.json
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\bin\Debug\netcoreapp2.0\BettingGames.runtimeconfig.json
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\bin\Debug\netcoreapp2.0\BettingGames.runtimeconfig.dev.json
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\bin\Debug\netcoreapp2.0\BettingGames.dll
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\bin\Debug\netcoreapp2.0\BettingGames.pdb
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\obj\Debug\netcoreapp2.0\BettingGames.csproj.CoreCompileInputs.cache
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\obj\Debug\netcoreapp2.0\BettingGames.AssemblyInfoInputs.cache
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\obj\Debug\netcoreapp2.0\BettingGames.AssemblyInfo.cs
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\obj\Debug\netcoreapp2.0\BettingGames.dll
+C:\Users\BryceH\source\repos\BettingGames\BettingGames\obj\Debug\netcoreapp2.0\BettingGames.pdb

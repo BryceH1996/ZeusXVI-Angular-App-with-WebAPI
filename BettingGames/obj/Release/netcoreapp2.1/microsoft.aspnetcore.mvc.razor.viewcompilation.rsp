@@ -1,0 +1,5 @@
+C:\Development\IIS Hosting\BettingGames\BettingGames
+--output-path=obj\Release\netcoreapp2.1\
+--application-name=BettingGames
+--content-root=C:\Development\IIS Hosting\BettingGames\BettingGames
+--file=
