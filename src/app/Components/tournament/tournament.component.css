@@ -1,0 +1,10 @@
+.padding{
+    padding: 20px
+}
+.container {
+    max-width: 97%;
+}
+td{
+    min-width: 15vw;
+    max-width: 15vw;
+}

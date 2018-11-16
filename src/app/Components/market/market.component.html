@@ -1,0 +1,40 @@
+<div class="container padding bg-white">
+  <div class="row">
+    <input class="col-sm-2 ml-sm-2 mb-4" type="number" placeholder="Odd One" #OddOne>
+    <input class="col-sm-2 ml-sm-2 mb-4" type="number" placeholder="Odd Two" #OddTwo>
+    <input class="col-sm-2 ml-sm-2 mb-4" type="number" placeholder="Draw" #Draw>
+    <select class="ml-sm-5 ml-sm-5 mb-4" type="number" [(ngModel)]="betID" (ngModelChange)="findID()">
+      <option *ngFor="let bet of Bets" [ngValue]="bet.id">{{bet.betName}}</option>
+    </select>
+
+    <button class="btn btn-dark ml-3 mb-4" (click)="postMarket(betID, OddOne.value, OddTwo.value, Draw.value)">Add</button>
+  </div>
+
+  <div *ngIf="market">
+    <table class="table table-striped table-borderless col-md-12">
+      <th>Bet Type</th>
+      <th>Odd One</th>
+      <th>Draw</th>
+      <th>Odd Two</th>
+      <th></th>
+      <tr *ngFor="let mark of market">
+        <td>{{mark.betName}}</td>
+        <td>{{mark.oddOne}}</td>
+        <td>{{mark.draw}}</td>
+        <td>{{mark.oddTwo}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteMarket(mark);">Delete <i class="fa fa-trash"></i></button>
+          <button class="btn btn-primary" (click)="mark.isHidden =!mark.isHidden">Edit <i class="mark.isHidden ? fa fa-edit"></i></button>
+        </td>
+        <td class="specialtd" align="right">
+          <div *ngIf="mark.isHidden">
+            <input class="col-sm-2" type="number" value="{{mark.oddOne}}" #OddOne>
+            <input class="col-sm-2" type="number" value="{{mark.oddTwo}}" #OddTwo>
+            <input class="col-sm-2" type="number" value="{{mark.draw}}" #Draw>
+            <button class="ml-1 btn btn-primary" (click)="editMarket( mark.id, OddOne.value, OddTwo.value, Draw.value); mark.isHidden =!mark.isHidden">Save</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand"><i class="fa fa-home mr-2"></i>Home</a>
+    <div>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/sports" class="nav-link"><i class="fa fa-soccer-ball-o mr-1"></i>Sports</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/country" class="nav-link"><i class="fa fa-flag mr-1"></i>Countries</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/tournament" class="nav-link"><i class="fa fa-trophy mr-1"></i>Tournaments</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/event" class="nav-link"><i class="fa fa-calendar-check-o mr-1"></i>Events</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/bet-type" class="nav-link"><i class="fa fa-money mr-1"></i>Bet Type</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="/market" class="nav-link"><i class="fa fa-shopping-cart mr-1"></i>Market</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

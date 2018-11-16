@@ -1,0 +1,26 @@
+<div class="container padding bg-white">
+  <div class="row">
+    <input class="col-sm-3 mb-4" type="text" placeholder="Enter Sport Name To Add" #newSport>
+    <button class="btn btn-dark mb-4" (click)="postSport(newSport.value); newSport.value=''">Add</button>
+  </div>
+  <div *ngIf="Sports">
+    <table class="table table-striped table-borderless col-md-12">
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <tr *ngFor="let sport of Sports">
+        <td>{{sport.sportName}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteSport(sport);">Delete <i class="fa fa-trash"></i></button>
+          <button class="btn btn-primary" (click)="sport.isHidden =!sport.isHidden">Edit <i class="sport.isHidden ? fa fa-edit"></i></button>
+        </td>
+        <td align="right">
+          <div *ngIf="sport.isHidden">
+            <input type="text" value="{{sport.sportName}}" #edit>
+            <button class="ml-1 btn btn-primary" (click)="editSport(edit.value, sport.id); sport.isHidden =!sport.isHidden">Save</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

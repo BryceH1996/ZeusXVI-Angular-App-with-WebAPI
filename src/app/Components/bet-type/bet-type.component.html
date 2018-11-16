@@ -1,0 +1,32 @@
+<div class="container padding bg-white">
+  <div class="row">
+    <input class="col-sm-3 mb-4" type="text" placeholder="Enter Bet Name To Add" #newBet>
+    <select class="ml-sm-5 mb-4" type="number" [(ngModel)]="eventID" (ngModelChange)="findID()">
+      <option *ngFor="let event of events" [ngValue]="event.id">{{event.eventName}}</option>
+    </select>
+
+    <button class="btn btn-dark ml-3 mb-4" (click)="postBet(eventID, newBet.value); newBet.value=''">Add</button>
+  </div>
+
+  <div *ngIf="Bets">
+    <table class="table table-striped table-borderless col-md-12">
+      <th>Event</th>
+      <th>BetType</th>
+      <th></th>
+      <tr *ngFor="let bet of Bets">
+        <td>{{bet.eventName}}</td>
+        <td>{{bet.betName}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteBet(bet);">Delete <i class="fa fa-trash"></i></button>
+          <button class="btn btn-primary" (click)="bet.isHidden =!bet.isHidden">Edit <i class="bet.isHidden ? fa fa-edit"></i></button>
+        </td>
+        <td align="right">
+          <div *ngIf="bet.isHidden">
+            <input type="text" value="{{bet.betName}}" #edit>
+            <button class="ml-1 btn btn-primary" (click)="editBet(edit.value, bet.id); bet.isHidden =!bet.isHidden">Save</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

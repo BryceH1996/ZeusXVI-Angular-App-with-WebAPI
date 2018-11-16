@@ -1,0 +1,32 @@
+<div class="container padding bg-white">
+  <div class="row">
+    <input class="col-sm-3 mb-4" type="text" placeholder="Enter Country Name To Add" #newCountry>
+    <select class="ml-sm-5 mb-4" type="number" [(ngModel)]="sportID" (ngModelChange)="findID()">
+      <option *ngFor="let sport of Sports" [ngValue]="sport.id">{{sport.sportName}}</option>
+    </select>
+
+    <button class="btn btn-dark ml-3 mb-4" (click)="postCountry(sportID, newCountry.value); newCountry.value=''">Add</button>
+  </div>
+
+  <div *ngIf="Countries">
+    <table class="table table-striped table-borderless col-md-12">
+      <th>Sport</th>
+      <th>Country</th>
+      <th></th>
+      <tr *ngFor="let country of Countries">
+        <td>{{country.sportName}}</td>
+        <td>{{country.countryName}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteCountry(country);">Delete <i class="fa fa-trash"></i></button>
+          <button class="btn btn-primary" (click)="country.isHidden =!country.isHidden">Edit <i class="country.isHidden ? fa fa-edit"></i></button>
+        </td>
+        <td align="right">
+          <div *ngIf="country.isHidden">
+            <input type="text" value="{{country.countryName}}" #edit>
+            <button class="ml-1 btn btn-primary" (click)="editCountry(edit.value, country.id); country.isHidden =!country.isHidden">Save</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
