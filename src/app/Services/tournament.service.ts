@@ -10,7 +10,7 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class TournamentService {
 
-  TournaURL: string = 'YourConnectionURL/api/tournament';
+  TournaURL: string = 'http://10.1.0.129:65410/api/tournament';
 
   constructor(private http: HttpClient) { }
 

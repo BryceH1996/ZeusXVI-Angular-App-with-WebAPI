@@ -10,7 +10,7 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class SportService {
 
-sportURL: string = 'YourConnectionURL/api/sport';
+sportURL: string = 'http://10.1.0.129:65410/api/sport';
 
   constructor(private http: HttpClient) { }
 

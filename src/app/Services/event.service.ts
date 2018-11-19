@@ -10,7 +10,7 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class EventService {
 
-  EventURL: string = 'YourConnectionURL/api/event';
+  EventURL: string = 'http://10.1.0.129:65410/api/event';
 
   constructor(private http: HttpClient) { }
 

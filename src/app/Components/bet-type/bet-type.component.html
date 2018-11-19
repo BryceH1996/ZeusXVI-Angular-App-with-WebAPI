@@ -8,6 +8,7 @@
     <button class="btn btn-dark ml-3 mb-4" (click)="postBet(eventID, newBet.value); newBet.value=''">Add</button>
   </div>
 
+  <div class="loader" *ngIf="!Bets"></div>
   <div *ngIf="Bets">
     <table class="table table-striped table-borderless col-md-12">
       <th>Event</th>

@@ -17,6 +17,7 @@
 
     <button class="btn btn-dark ml-3 mb-4" (click)="postEvents(newEvent.value, tournamentID, newDate.value); newDate.value=''; newEvent.value=''">Add</button>
   </div>
+  <div class="loader" *ngIf="!events"></div>
   <div *ngIf="events">
     <table class="table table-striped table-borderless col-md-12">
       <th>Name</th>

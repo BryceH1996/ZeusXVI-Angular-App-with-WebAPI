@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class BetTypeService {
 
-  betTypeURL: string = 'YourConnectionURL/api/bettype';
+  betTypeURL: string = 'http://10.1.0.129:65410/api/bettype';
 
   constructor(private http: HttpClient) { }
 

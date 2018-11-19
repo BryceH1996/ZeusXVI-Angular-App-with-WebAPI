@@ -12,7 +12,7 @@ const httpOptions = {
 })
 export class MarketService {
 
-  marketURL: string = 'YourConnectionURL/api/market';
+  marketURL: string = 'http://10.1.0.129:65410/api/market';
 
   constructor(private http: HttpClient) { }
 

@@ -10,7 +10,7 @@ const httpOptions = {
 @Injectable({providedIn: 'root'})
 export class CountryService {
 
-  countryURL: string = 'YourConnectionURL/api/country';
+  countryURL: string = 'http://10.1.0.129:65410/api/country';
 
   constructor(private http: HttpClient) { }
 
