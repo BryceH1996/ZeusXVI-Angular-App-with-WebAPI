@@ -7,7 +7,7 @@
       </li>
 
       <li class="nav-item row" *ngIf="!login">
-        <table class="table-borderless" >
+        <table class="table-borderless">
           <tr *ngIf="register == true">
             <td>
               <input type="text" placeholder="Username" #name>
@@ -39,6 +39,7 @@
 </div>
 <nav class="col-sm-3 col-md-2 sidebar">
   <div class="pointer">
+    <div class="loader" *ngIf="!Sports"></div>
     <div class="pl-1" *ngFor="let sport of Sports" (click)="findBySportID(sport.id)">{{sport.sportName}}
       <div *ngFor="let country of CountryTemp" (click)="findByCountryID(country.id)">
         <div class="pl-2" *ngIf="sport.id == country.sportID">{{country.countryName}}
@@ -48,7 +49,7 @@
                 <div class="pl-2" *ngIf="tour.id == event.tournamentID">{{event.eventName}}
                   <div *ngFor="let bet of BetTypeTemp">
                     <div class="pl-2" *ngIf="event.id == bet.eventID">
-                      <a (click)="findByBetID(bet.id); toggleMarket()" class="nav-link">{{bet.betName}}</a>
+                      <a (click)="findByBetID(bet.id)" class="nav-link">{{bet.betName}}</a>
                     </div>
                   </div>
                 </div>

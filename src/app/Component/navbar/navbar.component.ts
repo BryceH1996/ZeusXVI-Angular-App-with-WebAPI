@@ -9,6 +9,7 @@ import { UserService } from 'src/app/Service/user.service';
 import { User } from 'src/app/Model/User';
 import { Market } from 'src/app/Model/market';
 import { Bet } from 'src/app/Model/bet';
+import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-navbar',
@@ -105,6 +106,7 @@ export class NavbarComponent implements OnInit {
     for (var i = 0; i < this.Markets.length; i++) {
       if (this.Markets[i].betID == betID) {
         this.TempMarket.push(this.Markets[i]);
+        this.marketShow = true;
       }
     }
   }
@@ -170,10 +172,6 @@ export class NavbarComponent implements OnInit {
     this.register = !this.register;
     this.loggedIn = false;
   }
-
-  toggleMarket() {
-    this.marketShow = !this.marketShow;
-  }
   StakeTaken(stake: number, odds: number) {
     stake = +stake;
     this.stack = stake;
@@ -196,13 +194,12 @@ export class NavbarComponent implements OnInit {
             alert("No Odd Selected!");
           }
           else {
-            debugger;
             var eventID = this.eventID;
             var userID = this.User.id;
             this.User.balance -= this.stack;
             console.log(this.User.balance)
-
-            this._sportService.addBet({ amount, userID, eventID, marketID } as Bet).subscribe(bet => this.Bets.push(bet), () => null);
+            
+            this._sportService.addBet({ amount, userID, eventID, marketID } as Bet).subscribe(bet => this.Bets.push(bet), () => null, () => {this.stack = 0; this.amount = 0});
 
             var userDet: User = {
               id: this.User.id, userName: this.User.userName, password: this.User.password, balance: this.User.balance
